@@ -1,0 +1,21 @@
+{
+  "name": "react-exredux-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsrex start ./react.config.js",
+    "build": "tsrex build ./react.config.js",
+    "test": "tsrex test ./react.config.test.js",
+    "lib": "tsrex library ./react.config.lib.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jss": "^9.8.7",
+    "jss-vendor-prefixer": "^8.0.1",
+    "react-jss": "^8.6.1",
+    "tsrex": "0.0.1"
+  }
+}
