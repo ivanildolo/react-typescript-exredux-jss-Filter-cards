@@ -1,26 +1,19 @@
 import * as React from 'react';
-import { reactHot } from 'tsrex/utils';
-import { appModelStore } from './model-store';
-import { Provider } from 'react-redux';
-import UserContainer from '@containers/user/user-container';
-import { ThemeProvider } from 'react-jss';
-
-const theme = {
-  background: 'red',
-  color: '#24292e'
-};
+import { Provider } from 'exredux';
+import { modelStore } from './service/modelStore';
+import { Dashboard } from './containers/Dashboard';
+import { HashRouter } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <Provider store={appModelStore.createStore()}>
-          <h1>React+exredux+typescript</h1>
-          <UserContainer />
+      <HashRouter>
+        <Provider modelStore={modelStore}>
+          <Dashboard />
         </Provider>
-      </ThemeProvider>
+      </HashRouter>
     );
   }
 }
 
-export default reactHot(module, App);
+export default App;

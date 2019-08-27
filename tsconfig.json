@@ -1,21 +1,10 @@
 {
   "extends": "./node_modules/tsrex/tsconfig.json",
+  "include": ["**/src/**/*"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "dist",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@components": ["src/components"],
-      "@containers/*": ["src/containers/*"],
-      "@containers": ["src/containers"],
-      "@helpers/*": ["src/helpers/*"],
-      "@helpers": ["src/helpers"],
-      "@services/*": ["src/services/*"],
-      "@services": ["src/services"],
-      "@interfaces/*": ["src/interfaces/*"],
-      "@interfaces": ["src/interfaces"]
-    }
-  },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules"]
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "outDir": "dist"
+  }
 }

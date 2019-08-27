@@ -1,5 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import  App from './app';
+import App from './App';
+import { reactHot } from 'tsrex/utils';
+import './styles.css';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+function renderToDOM() {
+  const root = document.getElementById('app');
+  const HotReloadComponent = reactHot(module, App);
+  ReactDOM.render(<HotReloadComponent />, root);
+}
+renderToDOM();
+export { renderToDOM };

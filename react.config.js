@@ -1,25 +1,26 @@
-{
-  module.exports = {
-    // source of files
-    source: 'src',
-    // output path
-    outputPath: 'dist',
-    // port to be used in development
-    // will be set in webpack-dev-server
-    port: 8080,
-    // hostname to be used in development
-    // will be set in webpack-dev-server
-    host: 'localhost',
-    // all enviroments to be set in process.env
-    nodeEnv: {
-      commentsExample: 'Comment from Node Enviroments',
-      booleanValueExample: true,
-      numericValueExample: 37,
+'use strict';
+module.exports = {
+  source: 'src',
+  outputPath: 'dist',
+  port: 8080,
+  host: 'localhost',
+  nodeEnv: {
+    API_URL: 'https://reqres.in'
+  },
+  htmlEnv: {
+  },
+  reactHotLoader: true,
+  jest: {
+    coverageThreshold: {
+      global: {
+        branches: 50,
+        functions: 50,
+        lines: 50,
+      },
     },
-    // all enviroments to be set in HTMLWebpackPlugin
-    // available in HTML thru <%= htmlWebpackPlugin.options.propertyName %>
-    htmlEnv: {
-      htmlComments: 'Comment from HTML Enviroment',
-    },
-  };
-}
+    updateSnapshot: true,
+  },
+  devServer: {
+    open: true
+  }
+};

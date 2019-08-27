@@ -1,21 +1,26 @@
 {
-  "name": "react-exredux-typescript",
-  "version": "1.0.0",
+  "name": "tsrex-sample",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "tsrex start ./react.config.js",
     "build": "tsrex build ./react.config.js",
-    "test": "tsrex test ./react.config.test.js",
-    "lib": "tsrex library ./react.config.lib.js"
+    "test": "tsrex test ./react.config.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "D.A.Paula",
+  "license": "MIT",
   "dependencies": {
-    "jss": "^9.8.7",
-    "jss-vendor-prefixer": "^8.0.1",
-    "react-jss": "^8.6.1",
-    "tsrex": "0.0.1"
+    "jss": "9.8.7",
+    "jss-plugin-camel-case": "^10.0.0-alpha.7",
+    "jss-plugin-default-unit": "^10.0.0-alpha.7",
+    "jss-plugin-nested": "^10.0.0-alpha.7",
+    "jss-preset-default": "4.5.0",
+    "tsrex": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/jss": "^9.5.8",
+    "@types/react-jss": "^8.6.3",
+    "axios-mock-adapter": "^1.16.0"
   }
 }
