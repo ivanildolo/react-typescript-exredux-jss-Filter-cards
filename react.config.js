@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   source: 'src',
-  outputPath: 'dist',
+  outputPath: 'docs',
   port: 8080,
   host: 'localhost',
   nodeEnv: {

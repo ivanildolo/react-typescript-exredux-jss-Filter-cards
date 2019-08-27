@@ -5,6 +5,6 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "skipLibCheck": true,
-    "outDir": "dist"
+    "outDir": "docs"
   }
 }
